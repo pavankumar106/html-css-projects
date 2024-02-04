@@ -24,6 +24,17 @@ body {
   border-radius: 24px;
   padding: 25px;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+.profile-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 36%;
+  width: 100%;
+  border-radius: 24px 24px 0 0;
+  background-color: #4070f4;
 }
 .image {
   position: relative;
@@ -80,4 +91,45 @@ body {
   margin: 0 8px;
   background: #4070f4;
   text-decoration: none;
+}
+
+.profile-card .buttons {
+  display: flex;
+  align-items: center;
+  margin-top: 25px;
+}
+.buttons .button {
+  font-size: 14px;
+  font-weight: 400;
+  color: white;
+  border-radius: 24px;
+  margin: 0 10px;
+  padding: 8px 24px;
+  border: none;
+  background: #4070f4;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.buttons .button:hover {
+  background: #0e4bf1;
+}
+
+.profile-card .analytics {
+  display: flex;
+  align-items: center;
+  margin-top: 25px;
+}
+.analytics .data {
+  display: flex;
+  align-items: center;
+  color: #333;
+  padding: 0 15px;
+  border-right: 2px solid #e7e7e7;
+}
+.data i {
+  font-size: 18px;
+  margin-right: 6px;
+}
+.data:last-child {
+  border-right: none;
 }
